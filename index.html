@@ -156,13 +156,19 @@
       box-shadow: 0 20px 45px rgba(126, 12, 52, 0.08);
       display: inline-block;
     }
-    .hero-logo-main {
+    .hero-photo-main {
       width: 230px;
       height: 230px;
-      object-fit: contain;
+      object-fit: cover;
+      border-radius: 50%;
       display: block;
       margin: 0 auto;
-      filter: drop-shadow(0 10px 22px rgba(126, 12, 52, 0.22));
+      border: 4px solid var(--gold-light);
+      box-shadow: 0 12px 28px rgba(126, 12, 52, 0.2);
+      transition: transform 0.3s ease;
+    }
+    .hero-photo-main:hover {
+      transform: scale(1.03);
     }
     .hero-meta {
       margin-top: 1.5rem;
@@ -440,7 +446,7 @@
 
     <div class="hero-visual">
       <div class="hero-card">
-        <img src="odonto_harmony_logo.png" alt="Logo Odonto Harmony" class="hero-logo-main" />
+        <img src="dra_yasmin_hero.png" alt="Dra. Yasmin Araújo - Odonto Harmony" class="hero-photo-main" />
         <div class="hero-meta">
           <h3>Odonto Harmony</h3>
           <p>Responsável Técnica: Dra. Yasmin Araújo</p>
