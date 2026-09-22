@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Odonto Harmony · Clínica Odontológica & Harmonização em Vicente Pires</title>
+  <meta name="description" content="Saúde bucal e estética facial com excelência. Lentes em resina, harmonização orofacial, botox, clareamento e implantes com a Dra. Yasmin Araújo em Vicente Pires - DF." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #7e0c34;
+      --primary-dark: #520520;
+      --primary-light: #9e1445;
+      --gold: #d5ad6b;
+      --gold-light: #f5eedf;
+      --gold-dark: #b88d45;
+      --bg: #fdfbfc;
+      --surface: #ffffff;
+      --text: #2a2124;
+      --muted: #6e6166;
+      --border: #f0e4e8;
+      --whatsapp: #25d366;
+      --whatsapp-hover: #1ebd5a;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', sans-serif; }
+    body { color: var(--text); background: var(--bg); line-height: 1.6; overflow-x: hidden; }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(253, 251, 252, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      z-index: 100;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .brand-box {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-decoration: none;
+    }
+    .brand-logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(126, 12, 52, 0.18);
+    }
+    .brand-text h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.1;
+      letter-spacing: 0.5px;
+    }
+    .brand-text span {
+      font-size: 0.68rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      font-weight: 700;
+      display: block;
+    }
+    .btn-header {
+      background: var(--primary);
+      color: white;
+      padding: 0.65rem 1.4rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    .btn-header:hover { background: var(--primary-dark); transform: translateY(-2px); }
+
+    .hero {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4.5rem 1.5rem 4rem;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+    @media (max-width: 860px) {
+      .hero { grid-template-columns: 1fr; text-align: center; padding: 2.5rem 1.25rem; }
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--gold-light);
+      color: var(--primary);
+      padding: 0.45rem 1.2rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      margin-bottom: 1.3rem;
+      border: 1px solid #ebd9b8;
+    }
+    .hero h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 2.9rem;
+      line-height: 1.2;
+      color: var(--primary-dark);
+      margin-bottom: 1.2rem;
+    }
+    .hero-quote {
+      font-size: 1.15rem;
+      color: var(--gold-dark);
+      font-weight: 600;
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+    .hero p {
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin-bottom: 2.2rem;
+      max-width: 530px;
+    }
+    @media (max-width: 860px) { .hero p { margin: 0 auto 2rem; } }
+    .btn-whatsapp {
+      background: var(--whatsapp);
+      color: white;
+      padding: 1.05rem 2.4rem;
+      border-radius: 14px;
+      font-weight: 700;
+      font-size: 1.05rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+      transition: all 0.3s ease;
+    }
+    .btn-whatsapp:hover { background: var(--whatsapp-hover); transform: translateY(-3px); }
+
+    .hero-visual {
+      position: relative;
+      text-align: center;
+    }
+    .hero-card {
+      background: white;
+      border-radius: 32px;
+      padding: 2.5rem 2rem;
+      border: 1px solid var(--border);
+      box-shadow: 0 20px 45px rgba(126, 12, 52, 0.08);
+      display: inline-block;
+    }
+    .hero-logo-main {
+      width: 230px;
+      height: 230px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+      filter: drop-shadow(0 10px 22px rgba(126, 12, 52, 0.22));
+    }
+    .hero-meta {
+      margin-top: 1.5rem;
+    }
+    .hero-meta h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.35rem;
+      color: var(--primary);
+    }
+    .hero-meta p {
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+    .hero-review-tag {
+      margin-top: 1rem;
+      display: inline-block;
+      background: var(--gold-light);
+      padding: 0.45rem 1.1rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      border: 1px solid #ebd9b8;
+    }
+
+    /* Galeria de Resultados Reais */
+    .results-section {
+      background: var(--surface);
+      padding: 5rem 1.5rem;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .section-title {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 3.5rem;
+    }
+    .section-title span {
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: var(--gold-dark);
+    }
+    .section-title h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 2.5rem;
+      color: var(--primary-dark);
+      margin-top: 0.4rem;
+    }
+    .results-grid {
+      max-width: 1150px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+    .result-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+      transition: all 0.35s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .result-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 35px rgba(126, 12, 52, 0.12);
+      border-color: var(--primary);
+    }
+    .result-img-box {
+      width: 100%;
+      height: 320px;
+      overflow: hidden;
+      background: #000;
+    }
+    .result-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .result-card:hover .result-img-box img { transform: scale(1.04); }
+    .result-body {
+      padding: 1.6rem;
+      background: white;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .result-body h4 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.28rem;
+      color: var(--primary);
+      margin-bottom: 0.45rem;
+    }
+    .result-body p {
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* Especialidades */
+    .services-section {
+      padding: 5rem 1.5rem;
+      max-width: 1150px;
+      margin: 0 auto;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.75rem;
+    }
+    .service-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2.2rem;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.02);
+      transition: all 0.3s ease;
+    }
+    .service-card:hover { transform: translateY(-5px); border-color: var(--gold); box-shadow: 0 12px 28px rgba(126, 12, 52, 0.08); }
+    .service-icon {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+    .service-card h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.35rem;
+      color: var(--primary-dark);
+      margin-bottom: 0.5rem;
+    }
+    .service-card p {
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* Avaliações reais do Google (35 avaliações 5 estrelas) */
+    .reviews-section {
+      background: #fdf5f7;
+      padding: 5rem 1.5rem;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .reviews-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .review-box {
+      background: white;
+      padding: 1.8rem;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      font-style: italic;
+      color: #3b282e;
+      font-size: 0.95rem;
+    }
+    .review-author {
+      margin-top: 1rem;
+      font-style: normal;
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 0.85rem;
+      display: block;
+    }
+
+    /* Diferenciais da Clínica */
+    .features-strip {
+      max-width: 1150px;
+      margin: 4.5rem auto 0;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      text-align: center;
+    }
+    .feat-item {
+      background: white;
+      padding: 1.8rem 1.2rem;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+    }
+    .feat-item h5 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.1rem;
+      color: var(--primary);
+      margin-bottom: 0.4rem;
+    }
+    .feat-item p { font-size: 0.88rem; color: var(--muted); }
+
+    /* Endereço e Contato */
+    .location-banner {
+      max-width: 1150px;
+      margin: 4.5rem auto;
+      padding: 3rem 2rem;
+      background: white;
+      border-radius: 24px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2.5rem;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    }
+    .loc-box h4 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.25rem;
+      color: var(--primary-dark);
+      margin-bottom: 0.4rem;
+    }
+    .loc-box p { font-size: 0.92rem; color: var(--muted); line-height: 1.6; }
+
+    /* CTA Banner */
+    .cta-banner {
+      max-width: 1150px;
+      margin: 0 auto 5rem;
+      padding: 3.5rem 2rem;
+      background: linear-gradient(135deg, #7e0c34 0%, #520520 100%);
+      border-radius: 28px;
+      color: white;
+      text-align: center;
+      box-shadow: 0 20px 45px rgba(82, 5, 32, 0.25);
+    }
+    .cta-banner h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 2.3rem;
+      margin-bottom: 0.8rem;
+    }
+    .cta-banner p {
+      color: #fadce6;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      font-size: 1.05rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2.5rem 1rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="#" class="brand-box">
+      <img src="odonto_harmony_logo.png" alt="Odonto Harmony Clínica Odontológica" class="brand-logo" />
+      <div class="brand-text">
+        <h1>Odonto Harmony</h1>
+        <span>Clínica Odontológica & HOF</span>
+      </div>
+    </a>
+    <a href="https://wa.me/556135361807?text=Olá,%20Dra.%20Yasmin!%20Gostaria%20de%20agendar%20uma%20avaliação" target="_blank" class="btn-header">Agendar Consulta</a>
+  </header>
+
+  <section class="hero">
+    <div>
+      <span class="badge">✨ Dra. Yasmin Araújo · CRO-DF 15.074</span>
+      <div class="hero-quote">"Prezando pela sua saúde bucal e estética facial com harmonia e naturalidade."</div>
+      <h2>O sorriso dos seus sonhos aliado à excelência em estética orofacial.</h2>
+      <p>Clínica completa em Vicente Pires com atendimento humanizado, ambiente acolhedor com café especial e tecnologia de ponta em Lentes em Resina, Botox, Clareamento e Implantes.</p>
+      <a href="https://wa.me/556135361807?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20na%20Odonto%20Harmony" target="_blank" class="btn-whatsapp">
+        💬 Agende sua Consulta no WhatsApp: (61) 3536-1807
+      </a>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-card">
+        <img src="odonto_harmony_logo.png" alt="Logo Odonto Harmony" class="hero-logo-main" />
+        <div class="hero-meta">
+          <h3>Odonto Harmony</h3>
+          <p>Responsável Técnica: Dra. Yasmin Araújo</p>
+        </div>
+        <div class="hero-review-tag">
+          ⭐ 5.0 no Google · 35 Avaliações 5 Estrelas
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Diferenciais Rápidos -->
+  <div class="features-strip">
+    <div class="feat-item">
+      <h5>☕ Ambiente Acolhedor</h5>
+      <p>Consultório moderno, café especial e atendimento que tira o medo de dentista.</p>
+    </div>
+    <div class="feat-item">
+      <h5>♿ Acessibilidade Total</h5>
+      <p>Espaço 100% adaptado com rampa e banheiro para cadeira de rodas.</p>
+    </div>
+    <div class="feat-item">
+      <h5>🏳️‍🌈 Inclusão e Respeito</h5>
+      <p>Clínica acolhedora, segura e respeitosa para todos os pacientes.</p>
+    </div>
+    <div class="feat-item">
+      <h5>💳 Condições Facilitadas</h5>
+      <p>Parcelamento no cartão de crédito, débito e pagamento por aproximação.</p>
+    </div>
+  </div>
+
+  <!-- Galeria de Resultados Reais -->
+  <section class="results-section">
+    <div class="section-title">
+      <span>Transformações Reais</span>
+      <h2>Resultados Clínicos Comprovados</h2>
+    </div>
+
+    <div class="results-grid">
+      <div class="result-card">
+        <div class="result-img-box">
+          <img src="lentes_resina.jpg" alt="Lentes de Contato em Resina Antes e Depois" />
+        </div>
+        <div class="result-body">
+          <h4>Lentes de Contato & Facetas em Resina</h4>
+          <p>Correção de formato, espaçamento e alinhamento do sorriso com naturalidade, brilho e máxima harmonia estética.</p>
+        </div>
+      </div>
+
+      <div class="result-card">
+        <div class="result-img-box">
+          <img src="clareamento_antes_depois.jpg" alt="Clareamento Dental Antes e Depois" />
+        </div>
+        <div class="result-body">
+          <h4>Clareamento Dental Avançado</h4>
+          <p>Remoção de manchas e amarelamento com protocolos seguros que devolvem o branco radiante sem agredir o esmalte.</p>
+        </div>
+      </div>
+
+      <div class="result-card">
+        <div class="result-img-box">
+          <img src="botox_antes_depois.jpg" alt="Aplicação de Botox na Testa Antes e Depois" />
+        </div>
+        <div class="result-body">
+          <h4>Toxina Botulínica (Botox Facial)</h4>
+          <p>Amenização imediata de rugas e linhas dinâmicas de expressão, proporcionando rejuvenescimento leve e natural.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Procedimentos Oferecidos -->
+  <section class="services-section">
+    <div class="section-title">
+      <span>Nossas Especialidades</span>
+      <h2>Tratamentos Odontológicos & HOF</h2>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <span class="service-icon">💎</span>
+        <h3>Lentes e Facetas</h3>
+        <p>Transformação estética do sorriso para corrigir imperfeições de forma duradoura e minimamente invasiva.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="service-icon">💉</span>
+        <h3>Harmonização Orofacial (HOF)</h3>
+        <p>Preenchimento labial, botox, rinomodelação e bioestimuladores para valorizar os traços do seu rosto.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="service-icon">🦷</span>
+        <h3>Implantes & Cirurgia Oral</h3>
+        <p>Reabilitação oral completa com próteses e implantes modernos que devolvem a função mastigatória e a autoconfiança.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="service-icon">✨</span>
+        <h3>Clareamento Dental</h3>
+        <p>Técnicas modernas de clareamento no consultório e caseiro supervisionado para um sorriso iluminado.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="service-icon">😁</span>
+        <h3>Ortodontia & Aparelhos</h3>
+        <p>Alinhamento dentário funcional e estético com aparelhos convencionais, estéticos e alinhadores transparentes.</p>
+      </div>
+
+      <div class="service-card">
+        <span class="service-icon">🩺</span>
+        <h3>Clínica Geral & Prevenção</h3>
+        <p>Profilaxia, restaurações estéticas, tratamento de gengiva e acompanhamento preventivo completo para toda a família.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimentos Reais 5 Estrelas -->
+  <section class="reviews-section">
+    <div class="section-title">
+      <span>Avaliações Reais</span>
+      <h2>O Que Dizem Nossos Pacientes</h2>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review-box">
+        "Estou muito satisfeito, com um atendimento que nunca tive em nenhum lugar. Lugar agradável, aconchegante, e sou sempre muito bem atendido, com direito a café especial!"
+        <span class="review-author">— Raiandson Santos · Avaliação 5 estrelas no Google</span>
+      </div>
+
+      <div class="review-box">
+        "Fiz minha primeira harmonização com a Dra. Yasmin e fiquei muito satisfeita com o resultado, renovou minha autoestima e ela passa muita confiança em seu trabalho!"
+        <span class="review-author">— Joana Marques · Avaliação 5 estrelas no Google</span>
+      </div>
+
+      <div class="review-box">
+        "A Dra é muito acolhedora e trabalha muito bem, fiz minhas lentes em resina e ficaram lindas! Indico muito."
+        <span class="review-author">— Débora Silva · Avaliação 5 estrelas no Google</span>
+      </div>
+
+      <div class="review-box">
+        "Eu morria de medo de dentista desde criança, mas a Dra. Yasmin me acalma e é extremamente atenciosa no que faz! Ambiente agradável, só confio em ir lá."
+        <span class="review-author">— Letícia Rosa de Almeida · Avaliação 5 estrelas no Google</span>
+      </div>
+
+      <div class="review-box">
+        "O espaço é ótimo e muito bonito, equipamentos novos, clínica muito bem equipada e preparada para receber os pacientes. Super recomendo."
+        <span class="review-author">— Karen Sarmento · Avaliação 5 estrelas no Google</span>
+      </div>
+
+      <div class="review-box">
+        "Ótimo ambiente, clínica completa! Minha mãe realizou implante com os dentistas e foi um sucesso."
+        <span class="review-author">— Thiago Henrique · Avaliação 5 estrelas no Google</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Localização e Informações -->
+  <div class="location-banner">
+    <div class="loc-box">
+      <h4>📍 Localização</h4>
+      <p>SHVP Rua 12 Chácara 321 Loja 6<br>Setor Habitacional Vicente Pires<br>Brasília - DF · CEP 72007-820</p>
+    </div>
+    <div class="loc-box">
+      <h4>⏰ Funcionamento</h4>
+      <p>Segunda a Sexta: 08:00 às 18:00<br>Atendimento com hora marcada</p>
+    </div>
+    <div class="loc-box">
+      <h4>📱 Contato Direto</h4>
+      <p>WhatsApp / Telefone: (61) 3536-1807<br>Instagram: @clinicaodonto.harmony</p>
+    </div>
+  </div>
+
+  <!-- CTA Banner Final -->
+  <div class="cta-banner">
+    <h3>Pronta para transformar o seu sorriso e autoestima?</h3>
+    <p>Agende uma avaliação personalizada com a Dra. Yasmin Araújo na Odonto Harmony em Vicente Pires.</p>
+    <a href="https://wa.me/556135361807?text=Olá,%20Dra.%20Yasmin!%20Gostaria%20de%20tirar%20dúvidas%20e%20agendar%20uma%20avaliação" target="_blank" class="btn-whatsapp">
+      💬 Falar no WhatsApp com a Odonto Harmony
+    </a>
+  </div>
+
+  <footer>
+    <p>© 2026 Odonto Harmony · Clínica Odontológica & Harmonização Facial · Vicente Pires, Brasília - DF</p>
+  </footer>
+
+</body>
+</html>
